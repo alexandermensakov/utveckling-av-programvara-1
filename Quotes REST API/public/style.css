@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66475C;
+}
+
+
+.quote {
+    color: #E3B1D5;
+}
+
+.author {}
