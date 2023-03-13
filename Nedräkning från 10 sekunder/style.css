@@ -1,0 +1,17 @@
+body {
+    background-color: white;
+    color: black;
+    font-size: 48px;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+
+
+.hidden {
+    display: none;
+}
