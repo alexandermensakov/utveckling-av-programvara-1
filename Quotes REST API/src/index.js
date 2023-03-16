@@ -12,6 +12,6 @@ app.get('/api/quotes', (req, res) => {
     res.json(randomQuotes)
 })
 
-app.listen(3000, () => {
+app.listen(3000, () => { 
     console.log("server is running")
 })
