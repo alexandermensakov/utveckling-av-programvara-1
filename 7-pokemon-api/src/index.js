@@ -6,29 +6,23 @@ const app = express()
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'gamesdb',
-    port: '3307'
+    database: 'pokemon',
+    // port: '3307'
 })
-
+console.log(db);
 
 app.use(express.static(path.resolve('public')))
 
-
-app.get('/api/games', (req, res) => {
-    db.query('SELECT * FROM games', (err, rows) => {
+app.get('/api/pokemon', (req, res) => {
+    db.query('SELECT * FROM pokemon', (err, rows) => {
         if (err) throw err.message
         res.status(200).json(rows)
     })
 })
 
-app.get('/api/games', (req, res) => {
-    res.status(200).json(movies.map(game => ({
-        id: game.name,
-        releaseDate: game.release_date,
-        age: game.publish,
-        genres: game.genres,
-        releaseDate: game.releaseDate,
-
+app.get('/api/pokemon', (request, response) => {
+    response.status(200).json(pokemons.map(pokemon => ({
+        id: pokemon.name,
     })));
 });
 
